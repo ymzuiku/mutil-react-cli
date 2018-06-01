@@ -1,0 +1,84 @@
+{
+  "name": "mutil-react-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dll": {
+    "any": [
+      "react",
+      "react-dom"
+    ],
+    "client-project": [
+      "react-tiny-virtual-list",
+      "immutable",
+      "dayjs",
+      "lodash",
+      "react-redux",
+      "redux",
+      "redux-thunk",
+      "redux-logger",
+      "styled-components",
+      "react-motion"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack/webpack.dev.js",
+    "start-open": "webpack-dev-server --config webpack/webpack.dev.js --open",
+    "build": "webpack --progress --config webpack/webpack.prod.js",
+    "dll": "webpack --progress --config webpack/webpack.dll.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "port": "7000",
+  "proxy": {
+    "/": {
+      "target": "http://localhost:7000",
+      "secure": false
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.109",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-async-to-module-method": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "ess-loader": "^0.4.1",
+    "fast-uglifyjs-plugin": "^0.3.0",
+    "fs-extra": "^6.0.1",
+    "gka": "^2.8.4",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "postcss-loader": "^2.1.5",
+    "react-hot-loader": "^4.2.0",
+    "style-loader": "^0.21.0",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "dayjs": "^1.6.5",
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.10",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "^5.0.7",
+    "react-tiny-virtual-list": "^2.1.4",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.3.0"
+  }
+}
