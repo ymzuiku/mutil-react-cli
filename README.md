@@ -34,7 +34,7 @@ $ client=prject-name npm run build (编译至public/name)
 ```
 client也可以简写成c
 ```bash
-$ c=name npm run dll
+$ c=prject-name npm run dll
 ```
 
 ### 前端编译
