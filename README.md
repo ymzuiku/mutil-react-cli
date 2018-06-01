@@ -1,5 +1,7 @@
 # egg-react-cli
 
+> 该脚手架支持多个项目的编译
+
 > 该脚手架支持使用 webpack.DllPlugin 对常用npm包进行预编译，减少开发时的重复编译时间
 
 > 使用了 [react-hot-loader](https://github.com/gaearon/react-hot-loader/tree/next)
