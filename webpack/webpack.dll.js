@@ -28,6 +28,30 @@ module.exports = {
      */
     library: '[name]_library'
   },
+  resolve: {
+    extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
+    alias: {
+      'react-native': 'react-native-web',
+    },
+    plugins: [],
+  },
+  module: {
+    strictExportPresence: true,
+    rules: [
+      {
+        test: /\.(js|jsx|mjs)$/,
+        include: [
+          // 这里编写需要预先 babel 的项目
+          // /node_modules\/react-native-/,
+          // /node_modules\/react-navigation/,
+        ],
+        loader: require.resolve('babel-loader'),
+        options: {
+          compact: true,
+        },
+      },
+    ],
+  },
   plugins: [
     new FastUglifyJsPlugin({
       compress: {

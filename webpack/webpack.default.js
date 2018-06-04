@@ -9,11 +9,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FastUglifyJsPlugin = require('fast-uglifyjs-plugin');
 const autoprefixer = require('autoprefixer');
 
-const dllPath = path.resolve(
-  __dirname,
-  `../${client}/assets/dll/dll.js`
-);
-
 const dllManifestPath = path.join(
   __dirname,
   '../',
@@ -82,7 +77,7 @@ module.exports = {
     // 全局变量
     new webpack.ProvidePlugin({
       $: 'jquery',
-      _: 'underscore'
+      _: 'lodash'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, `../${client}/index.html`),

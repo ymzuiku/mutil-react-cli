@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import env from './env'
+import registerServiceWorker from './registerServiceWorker';
+
+
 
 function hotRender(App, theId='root'){
   if (env.dev) {
@@ -15,5 +18,7 @@ function hotRender(App, theId='root'){
     }
   }
 }
+
+registerServiceWorker();
 
 export default hotRender
